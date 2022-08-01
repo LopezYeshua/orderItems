@@ -36,10 +36,35 @@ public class TestOrders {
 
         // add item1 to order2's item list and incrememnt the order's total.
         order2.items.add(item1);
+        order2.total += item1.price;
 
-        System.out.printf("Name: %s\n", order1.name);
-        System.out.printf("Total: $%s\n", order1.total);
-        System.out.printf("Ready: %s\n", order1.ready);
+        System.out.printf("Name: %s\n", order2.name);
+        System.out.printf("Total: $%s\n", order2.total);
+        System.out.printf("Ready: %s\n", order2.ready);
 
+        order3.items.add(item4);
+        order3.total += item4.price;
+
+        System.out.printf("Name: %s\n", order3.name);
+        System.out.printf("Total: $%s\n", order3.total);
+        System.out.printf("Ready: %s\n", order3.ready);
+
+        // Sam is ordering two lattes.
+        order4.items.add(item2);
+        order4.items.add(item2);
+        order4.total += item2.price;
+
+        System.out.printf("Name: %s\n", order4.name);
+        System.out.printf("Total: $%s\n", order4.total);
+        System.out.printf("Ready: %s\n", order4.ready);
+
+        order1.ready = true;
+        System.out.println(order1.ready);
+
+        order4.ready = true;
+        System.out.println(order4.ready);
+
+        order2.ready = true;
+        System.out.println(order2.ready);
     }
 }
